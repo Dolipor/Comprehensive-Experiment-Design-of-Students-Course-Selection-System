@@ -1,5 +1,5 @@
 **计G191 2019322031 丁刚**
-#综合性实验  学生选课系统设计#
+# 综合性实验  学生选课系统设计
 ## 实验目的
     分析学生选课系统
     使用GUI窗体及其组件设计窗体界面
@@ -16,7 +16,7 @@
     4.基于输入/输出编程，支持学生、课程、教师等数据的读写操作。
     5.基于Github.com提交实验，包括实验SRC源文件夹程序、README.MD实验报告文档。
 ## 实验过程
-###角色分析与类设计
+### 角色分析与类设计
     1.设计Personnel类（人员类）
       声明编号、姓名、性别变量；
     2.设计Teacher类（教师类）
@@ -56,7 +56,7 @@ public void putsubject(){
 ```
     4.设计Subject类（课程类）
     声明编号、课程名称、上课地点、时间和学分变量，调用Teacher类，使用toString() 方法将“"课程编号："+id+",课程名："+name+",地点："+place+",时间："+time+",学分："+mark+",老师信息："+teacher;”转为字符串返回结果。
-###GUI窗体设计
+### GUI窗体设计
     1.界面设计
     采用“GridBagLayoutDemo”进行二次开发，设置j2、j3为“选课、退课（开课、关课）”按钮，设置j5下拉列表为课程名称，设置j6文本框获取学生、老师姓名，，设置j9文本框为课程信息输出。（下以教师管理为例）
 ```Java
@@ -106,7 +106,7 @@ class MyActionListener implements ActionListener{//定义监听器类
 }
 MyActionListener myActionListener;
 ```
-###基于文件保存并读取数据（以选、退课为例）
+### 基于文件保存并读取数据（以选、退课为例）
     1.声明文件流相关属性和字符缓存器
 ```Java
         File f1= new File("C:\\Users\\lenovo\\Desktop"+File.separator+"选课.txt"); //文件路径及名称
@@ -157,13 +157,13 @@ public void actionPerformed(ActionEvent arg0) {
 ## 流程图
 ![呀！没加载出来](https://github.com/Dolipor/Comprehensive-Experiment-Design-of-Students-Course-Selection-System/blob/master/流程图.png)
 ## 实验结果
-###选课操作
+### 选课操作
 ![呀！没加载出来](https://github.com/Dolipor/Comprehensive-Experiment-Design-of-Students-Course-Selection-System/blob/master/选课.png)
-###选课后“选课.txt”内保存的数据
+### 选课后“选课.txt”内保存的数据
 ![呀！没加载出来](https://github.com/Dolipor/Comprehensive-Experiment-Design-of-Students-Course-Selection-System/blob/master/文件1.png)
-###退课操作
+### 退课操作
 ![呀！没加载出来](https://github.com/Dolipor/Comprehensive-Experiment-Design-of-Students-Course-Selection-System/blob/master/退课.png)
-###退课后“选课.txt”内保存的数据
+### 退课后“选课.txt”内保存的数据
 ![呀！没加载出来](https://github.com/Dolipor/Comprehensive-Experiment-Design-of-Students-Course-Selection-System/blob/master/文件2.png)
 ## 实验感悟
     通过本学期的多次实验，让我掌握了Java基本语法，学会了图像界面的设计，掌握了字符串String及其方法的使用和添加异常处理。
