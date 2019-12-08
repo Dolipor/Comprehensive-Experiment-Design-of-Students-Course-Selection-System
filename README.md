@@ -18,9 +18,9 @@
 ## 实验过程
 ### 角色分析与类设计
     1.设计Personnel类（人员类）
-      声明编号、姓名、性别变量。
+    声明编号、姓名、性别变量。
     2.设计Teacher类（教师类）
-      继承Personnel类，获得编号、姓名、性别变量，调用Subject类， 使用toString() 方法将“"老师编号："+id+",老师："+name+",性别："+sex ”转为字符串返回结果。
+    继承Personnel类，获得编号、姓名、性别变量，调用Subject类， 使用toString() 方法将“"老师编号："+id+",老师："+name+",性别："+sex ”转为字符串返回结果。
 ```Java
 public class Teacher extends Personnel {
 	Subject subject;
@@ -33,7 +33,7 @@ public class Teacher extends Personnel {
 }
 ```
     3.设计Student类（学生类）
-      继承Personnel类，获得编号、姓名、性别变量，调用Subject类，进行选课、退课操作，使用toString() 方法将“"学生编号："+id+",学生："+name+",所选课程："+subject;”转为字符串返回结果。
+    继承Personnel类，获得编号、姓名、性别变量，调用Subject类，进行选课、退课操作，使用toString() 方法将“"学生编号："+id+",学生："+name+",所选课程："+subject;”转为字符串返回结果。
 ```Java
 public void putsubject(){
 		if(subject==null){
@@ -55,10 +55,10 @@ public void putsubject(){
 	}
 ```
     4.设计Subject类（课程类）
-      声明编号、课程名称、上课地点、时间和学分变量，调用Teacher类，使用toString() 方法将“"课程编号："+id+",课程名："+name+",地点："+place+",时间："+time+",学分："+mark+",老师信息："+teacher;”转为字符串返回结果。
+    声明编号、课程名称、上课地点、时间和学分变量，调用Teacher类，使用toString() 方法将“"课程编号："+id+",课程名："+name+",地点："+place+",时间："+time+",学分："+mark+",老师信息："+teacher;”转为字符串返回结果。
 ### GUI窗体设计
     1.界面设计
-      采用“GridBagLayoutDemo”进行二次开发，设置j2、j3为“选课、退课（开课、关课）”按钮，设置j5下拉列表为课程名称，设置j6文本框获取学生、老师姓名，，设置j9文本框为课程信息输出。（下以教师管理为例）
+    采用“GridBagLayoutDemo”进行二次开发，设置j2、j3为“选课、退课（开课、关课）”按钮，设置j5下拉列表为课程名称，设置j6文本框获取学生、老师姓名，，设置j9文本框为课程信息输出。（下以教师管理为例）
 ```Java
 	d = new MyFrame();
         j2 = new JButton("开课");
@@ -74,7 +74,7 @@ public void putsubject(){
         j9 = new TextField();
 ```
     2.事件驱动
-      定义j2（开课）按钮为事件源，j2注册监听器对象actionPerformed，actionPerformed实现ActionEvent event响应操作为j9输出开课信息， ActionEvent event中教师名获取j6文本框输入的文本，课程名获取j5下拉文本。
+    定义j2（开课）按钮为事件源，j2注册监听器对象actionPerformed，actionPerformed实现ActionEvent event响应操作为j9输出开课信息， ActionEvent event中教师名获取j6文本框输入的文本，课程名获取j5下拉文本。
 ```Java
 j2.addActionListener(this);//注册监听器
 public void actionPerformed(ActionEvent event) {//指定监听器实现方法
@@ -89,7 +89,7 @@ public void actionPerformed(ActionEvent event) {//指定监听器实现方法
     
 }
 ```
-      定义j3（退课）按钮为事件源，j3注册监听器对象MyActionListener，定义MyActionListener实现ActionListener接口响应操作为j9输出关课文本。
+    定义j3（退课）按钮为事件源，j3注册监听器对象MyActionListener，定义MyActionListener实现ActionListener接口响应操作为j9输出关课文本。
 ```Java
 myActionListener =new MyActionListener(j9);//创建监听器
 j3.addActionListener(myActionListener);
@@ -118,7 +118,7 @@ MyActionListener myActionListener;
 	StringBuffer def ;//缓存器
 ```
     2.选课流程
-      将选课输出内容写入“选课.txt”文件，输入每名学生信息后换行，并设计异常。
+    将选课输出内容写入“选课.txt”文件，输入每名学生信息后换行，并设计异常。
 ```Java
 	try {
     	    	out=new FileWriter(f1,true);
@@ -130,7 +130,7 @@ MyActionListener myActionListener;
 			}
 ```
     3.退课流程
-      读取文件每一行数据逐次放入缓存，缓存中的一行数据与姓名、课程对比，相同则该行数据不写入文件，不同则写入文件，直到缓存读取到文件数据为空停止，并设计异常。
+    读取文件每一行数据逐次放入缓存，缓存中的一行数据与姓名、课程对比，相同则该行数据不写入文件，不同则写入文件，直到缓存读取到文件数据为空停止，并设计异常。
 ```Java
 public void actionPerformed(ActionEvent arg0) {
 	try {
